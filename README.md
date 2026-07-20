@@ -81,9 +81,9 @@ VITE_API_BASE_URL=http://localhost:8000
 
 ### Running the Frontend (Vite)
 
-1. Navigate to the frontend directory:
+1. Open a new terminal window at the project root and navigate to the frontend directory:
    ```bash
-   cd ../frontend
+   cd frontend
    ```
 2. Install npm dependencies:
    ```bash
