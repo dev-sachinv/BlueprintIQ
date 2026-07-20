@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Outfit", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased font-sans selection:bg-violet-500/30 selection:text-violet-200;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+/* Custom scrollbars for a premium look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded hover:bg-slate-700 transition-colors;
+}
+
+/* Custom styles for rendered markdown content in prose */
+.prose table {
+  @apply w-full border-collapse my-6 text-left text-sm;
+}
+.prose th {
+  @apply font-display font-semibold uppercase tracking-wider text-xs text-slate-400 border-b border-slate-800 pb-2.5;
+}
+.prose td {
+  @apply py-3 border-b border-slate-900 text-slate-300 leading-relaxed;
+}
+.prose tr:hover td {
+  @apply text-slate-100;
+}
+.prose pre {
+  @apply bg-slate-950 border border-slate-800 p-4 rounded-lg my-6 overflow-x-auto;
+}
+.prose code {
+  @apply font-mono text-xs text-violet-300 bg-slate-900 border border-slate-800 rounded px-1.5 py-0.5;
+}
+.prose pre code {
+  @apply bg-transparent border-none p-0 text-slate-200;
+}
+.prose p {
+  @apply mb-4 leading-relaxed text-slate-300;
+}
+.prose h1 {
+  @apply text-2xl font-bold mt-8 mb-4 text-slate-100;
+}
+.prose h2 {
+  @apply text-xl font-bold mt-6 mb-3 text-slate-100 border-b border-slate-900 pb-2;
+}
+.prose h3 {
+  @apply text-lg font-bold mt-5 mb-2.5 text-slate-200;
+}
+.prose ul {
+  @apply list-disc pl-5 mb-4 space-y-1 text-slate-300;
+}
+.prose ol {
+  @apply list-decimal pl-5 mb-4 space-y-1 text-slate-300;
+}
+.prose blockquote {
+  @apply border-l-4 border-violet-500 bg-slate-900/40 px-4 py-3 rounded-r-lg my-4 text-slate-400 italic;
+}
+.prose blockquote p {
+  @apply m-0;
+}
+
+/* Printing styles for PDF export */
+@media print {
+  html, body {
+    height: auto !important;
+    overflow: visible !important;
+    background: white !important;
+    color: black !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+  }
+
+  /* Reset all flex/scroll panel heights and overflows so they expand and paginate naturally */
+  #root,
+  div,
+  main,
+  section,
+  article {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    display: block !important;
+    position: relative !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: white !important;
+    color: black !important;
+    overflow: visible !important;
+  }
+
+  .prose p, .prose li, .prose td {
+    color: #1f2937 !important; /* Tailwind gray 800 */
+  }
+  
+  .prose h1, .prose h2, .prose h3, .prose h4 {
+    color: #111827 !important; /* Tailwind gray 900 */
+  }
+  
+  .prose pre {
+    background: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+  }
+  
+  .prose code {
+    color: #374151 !important;
+    background: #f3f4f6 !important;
+    border: 1px solid #e5e7eb !important;
+  }
+  
+  .prose td {
+    border-bottom: 1px solid #e5e7eb !important;
+  }
+  
+  .prose th {
+    border-bottom: 2px solid #d1d5db !important;
+    color: #374151 !important;
+  }
+  
+  pre, code, blockquote, tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* Explicit page breaking for sections */
+  .page-break-before {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+  
+  a {
+    text-decoration: underline;
+    color: #1a56db !important;
+  }
+}
