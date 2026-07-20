@@ -5,7 +5,7 @@ import PlanViewer from './PlanViewer';
 import { Plus, History, Trash2, ShieldAlert, Sparkles, FolderKanban, LogOut, User } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
 export default function Dashboard() {
   const { session, logout, user } = useAuth();
