@@ -213,7 +213,7 @@ export default function Dashboard() {
           <div className="flex items-center gap-2">
             <FolderKanban className="w-6 h-6 text-violet-500" />
             <h1 className="text-md font-bold text-slate-100 uppercase tracking-wider">
-              Project Guides
+              BlueprintIQ
             </h1>
           </div>
         </div>
