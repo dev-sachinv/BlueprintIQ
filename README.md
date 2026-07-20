@@ -2,6 +2,8 @@
 
 BlueprintIQ is an AI-powered project build-plan generator designed for developers, architects, and product managers. It takes a raw project idea and constraints (team size, skill level, timeframe, platform, and budget) and designs a comprehensive, production-ready build plan.
 
+🔗 **Live Demo**: [https://blueprint-iq-iota.vercel.app](https://blueprint-iq-iota.vercel.app)
+
 ## 🌟 Key Features
 
 *   **5-Stage LLM Pipeline**: Progressively plans project requirements, designs architecture diagrams, splits the work into modules, optimizes scope for MVP, and synthesizes a full documentation package.
