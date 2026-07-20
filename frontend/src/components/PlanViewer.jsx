@@ -367,7 +367,7 @@ export default function PlanViewer({ plan }) {
         {/* Title Block */}
         <div className="border-b-2 border-slate-200 pb-6">
           <span className="text-[10px] text-indigo-600 uppercase tracking-widest font-bold border border-indigo-200 rounded px-2 py-0.5">
-            AI Blueprint Build Plan
+            BlueprintIQ Build Plan
           </span>
           <h1 className="text-3xl font-extrabold text-slate-900 mt-3">{plan.title}</h1>
           <p className="text-xs text-slate-500 mt-2">

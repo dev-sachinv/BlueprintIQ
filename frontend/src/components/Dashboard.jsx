@@ -313,7 +313,7 @@ export default function Dashboard() {
                     AI Blueprint Engine
                   </div>
                   <h1 className="text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
-                    AI Project Guide
+                    BlueprintIQ
                   </h1>
                   <p className="text-slate-400 text-sm max-w-md mx-auto">
                     Submit your raw project idea and constraints to generate a 100% free-tier-first build plan automatically.

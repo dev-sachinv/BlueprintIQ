@@ -53,7 +53,7 @@ export default function SignIn() {
           AI Blueprint Engine
         </div>
         <h1 className="text-3xl font-extrabold tracking-tight text-slate-100">
-          AI Project Guide
+          BlueprintIQ
         </h1>
         <p className="text-slate-400 text-sm max-w-xs mx-auto">
           Sign in to generate, save, and access your project implementation plans.
